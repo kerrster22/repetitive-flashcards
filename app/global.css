@@ -1,0 +1,62 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #0a0a0a;
+  --primary-color: #16a34a;
+  --primary-text-color: #f9fafb;
+  --secondary-color: #1e293b;
+  --secondary-text-color: #f9fafb;
+  --muted-color: #f1f5f9;
+  --muted-text-color: #64748b;
+  --accent-color: #f1f5f9;
+  --accent-text-color: #1e293b;
+  --border-color: #e2e8f0;
+  --card-color: #ffffff;
+  --card-text-color: #0a0a0a;
+  --destructive-color: #ef4444;
+  --destructive-text-color: #f9fafb;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background-color: #0f172a;
+  --text-color: #f9fafb;
+  --primary-color: #22c55e;
+  --primary-text-color: #052e16;
+  --secondary-color: #1e293b;
+  --secondary-text-color: #f9fafb;
+  --muted-color: #1e293b;
+  --muted-text-color: #94a3b8;
+  --accent-color: #1e293b;
+  --accent-text-color: #f9fafb;
+  --border-color: #1e293b;
+  --card-color: #0f172a;
+  --card-text-color: #f9fafb;
+  --destructive-color: #7f1d1d;
+  --destructive-text-color: #f9fafb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
