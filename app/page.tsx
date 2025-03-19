@@ -1,37 +1,15 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Brain, Clock, Trophy, Users } from "lucide-react"
+import Footer from "@/components/footer"
+import Navbar from "@/components/navbar"
+import CTA from "@/components/cta"
+import Testimonial from "@/components/testimonial"
 
 export default function LandingPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="border-b">
-        <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-          <div className="flex items-center gap-2">
-            <Brain className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">MemoryMaster</span>
-          </div>
-          <nav className="hidden md:flex gap-6">
-            <Link href="/features" className="text-sm font-medium hover:underline underline-offset-4">
-              Features
-            </Link>
-            <Link href="/how-it-works" className="text-sm font-medium hover:underline underline-offset-4">
-              How It Works
-            </Link>
-            <Link href="/testimonials" className="text-sm font-medium hover:underline underline-offset-4">
-              Testimonials
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Link href="/login">
-              <Button variant="outline">Log In</Button>
-            </Link>
-            <Link href="/signup">
-              <Button>Sign Up</Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Navbar/>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted">
           <div className="container px-4 md:px-6">
@@ -218,160 +196,12 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">What Our Users Say</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  Join thousands of satisfied learners who have transformed their learning experience.
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
-              <div className="flex flex-col justify-between rounded-lg border p-6 shadow-sm">
-                <div className="space-y-4">
-                  <div className="flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <svg
-                        key={i}
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="h-5 w-5 text-yellow-500"
-                      >
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground">
-                    "MemoryMaster helped me ace my medical exams. The spaced repetition algorithm is incredibly
-                    effective!"
-                  </p>
-                </div>
-                <div className="mt-6 flex items-center space-x-3">
-                  <div className="h-10 w-10 rounded-full bg-muted" />
-                  <div>
-                    <p className="text-sm font-medium">Dr. Sarah Johnson</p>
-                    <p className="text-sm text-muted-foreground">Medical Student</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col justify-between rounded-lg border p-6 shadow-sm">
-                <div className="space-y-4">
-                  <div className="flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <svg
-                        key={i}
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="h-5 w-5 text-yellow-500"
-                      >
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground">
-                    "I've tried many language learning apps, but MemoryMaster's approach has been the most effective for
-                    vocabulary retention."
-                  </p>
-                </div>
-                <div className="mt-6 flex items-center space-x-3">
-                  <div className="h-10 w-10 rounded-full bg-muted" />
-                  <div>
-                    <p className="text-sm font-medium">Miguel Rodriguez</p>
-                    <p className="text-sm text-muted-foreground">Language Enthusiast</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col justify-between rounded-lg border p-6 shadow-sm">
-                <div className="space-y-4">
-                  <div className="flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <svg
-                        key={i}
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="h-5 w-5 text-yellow-500"
-                      >
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground">
-                    "The gamification elements keep me motivated, and I love competing with friends on the leaderboard!"
-                  </p>
-                </div>
-                <div className="mt-6 flex items-center space-x-3">
-                  <div className="h-10 w-10 rounded-full bg-muted" />
-                  <div>
-                    <p className="text-sm font-medium">Emily Chen</p>
-                    <p className="text-sm text-muted-foreground">College Student</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Testimonial/>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Ready to Transform Your Learning?
-                </h2>
-                <p className="max-w-[900px] md:text-xl">
-                  Join thousands of learners who have already discovered the power of spaced repetition.
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Link href="/signup">
-                  <Button size="lg" variant="secondary" className="gap-1">
-                    Get Started <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </Link>
-                <Link href="/pricing">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-                  >
-                    View Pricing
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CTA/>
+
+        <Footer/>
       </main>
-      <footer className="border-t py-6 md:py-0">
-        <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-          <div className="flex items-center gap-2">
-            <Brain className="h-6 w-6 text-primary" />
-            <p className="text-sm text-muted-foreground">© 2025 MemoryMaster. All rights reserved.</p>
-          </div>
-          <div className="flex gap-4">
-            <Link href="/privacy" className="text-sm text-muted-foreground hover:underline underline-offset-4">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-sm text-muted-foreground hover:underline underline-offset-4">
-              Terms of Service
-            </Link>
-            <Link href="/contact" className="text-sm text-muted-foreground hover:underline underline-offset-4">
-              Contact
-            </Link>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
