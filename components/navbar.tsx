@@ -7,8 +7,10 @@ export default function Navbar() {
         <header className="border-b">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2">
-            <Brain className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">MemoryMaster</span>
+            <a href="/" className="flex items-center gap-2">
+              <Brain className="h-6 w-6 text-primary" />
+              <span className="text-xl font-bold">MemoryMaster</span>
+            </a>
           </div>
           <nav className="hidden md:flex gap-6">
             <Link href="/features" className="text-sm font-medium hover:underline underline-offset-4">
@@ -22,7 +24,7 @@ export default function Navbar() {
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <Link href="/login">
+            <Link href="/signin">
               <Button variant="outline">Log In</Button>
             </Link>
             <Link href="/signup">
